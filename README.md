@@ -6,6 +6,7 @@ A machine learning project using the Chicago energy consumption data retrieved f
 
 The data comrpises the energy usage in households, businesses, and industries in Chicago in the year 2010. The dataset consists of electricty and gas used for the months, characteristics of the distribution of usage over these months, and data related to building and occupancy characteristics. 
 The dataset has 67051 instances and 73 attributes. 
+
 The data can be found in the "Data" folder in this repository. 
 
 ## Problem Statement

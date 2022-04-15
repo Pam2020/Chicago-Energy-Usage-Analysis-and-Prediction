@@ -26,7 +26,7 @@ We also infer that the target variable distribution is higly imbalanced. This fa
 ## Next steps
 
 The following will be done before the modeling phase:
-1. The outliers in different coloumns observed during the EDA will be handled. 
+1. The outliers in different columns observed during the EDA will be handled. 
 2. Majority of the data is numerical and are widely ranged. Therefore, the data needs to be standardized when building pipelines. 
 3. Missing values will be handled with pipelines. 
 

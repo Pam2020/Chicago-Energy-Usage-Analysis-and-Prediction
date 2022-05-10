@@ -11,7 +11,7 @@ The data can be found in the "Data" folder in this repository.
 
 ## Problem Statement
 
-Typically, energy usage depends on a lot of factors including the size of the building, occupany, and utility. In our data, we have some of these characterstics along with the energy consumption recorded. The building type variable categorizes the building as residential, commercial and industrial. In this study, I will try to predict the building type based on the energy consumption statistics and the building characterstics given in the data. This would be a multi-class classification problem. 
+Typically, energy usage depends on a lot of factors including the size of the building, occupany, and utility. In our data, we have some of these characterstics along with the energy consumption recorded. The building type variable categorizes the building as residential, commercial and industrial. In this study, I will try to predict the building type based on the energy consumption statistics and the building characterstics given in the data. As the data for industrial buildings is very less (less than 0.1%) compared to the other two classes, I will be merging the Commercial and Industrial classes to form a single class named 'Non-Residential'.
 
 ## Exploratory Data Analysis Findings
 

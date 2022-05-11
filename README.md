@@ -31,8 +31,6 @@ Features in the dataset are processed before the modeling phase. My dataset has 
 
 I also combine the 'Industrial' and 'Commercial' classes in the target varible to form a new class named 'Non-Residential'. This reduces my problem to a binary classification problem. 
 
-![Target variable distribution](https://github.com/Pam2020/DATA602-FinalProject-ChicagoEnergy/blob/main/Images/TargetDistribution.PNG)
-
 ## Modeling
 
 I have chosen a few classifers to solve this classification problem and compared their evaluation scores to find the best model for this problem. I use the GridSearchCV to perform cross-validation and hyperparameter tuning. The model parameters that optimize the precision macro score are chosen to be the best parameters for the classifier. The different classifiers explored are:

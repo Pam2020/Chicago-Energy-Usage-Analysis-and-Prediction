@@ -31,7 +31,7 @@ Features in the dataset are processed before the modeling phase. My dataset has 
 
 I also combine the 'Industrial' and 'Commercial' classes in the target varible to form a new class named 'Non-Residential'. This reduces my problem to a binary classification problem. 
 
-![Target variable distribution]()
+![Target variable distribution](https://github.com/Pam2020/DATA602-FinalProject-ChicagoEnergy/blob/main/Images/Results.PNG)
 
 ## Modeling
 

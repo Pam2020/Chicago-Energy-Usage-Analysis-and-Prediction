@@ -25,12 +25,42 @@ We also infer that the target variable distribution is higly imbalanced. This fa
 3. Building age seems to be maximum for residential buildings. However, the distribution is more spread out for commercial buildings. Most of the industrial buildings are fairly new. This could be a reasonable parameter for classification. 
 4. Contradictory to our intuition, the average building size for residential and commercial buildings show similar distribution. The building sizes for industrial buildings seem to be lesser than residential and commercial ones. 
 
-## Next steps
+## Feature Processing
 
-The following will be done before the modeling phase:
-1. The outliers in different columns observed during the EDA will be handled. 
-2. Majority of the data is numerical and are widely ranged. Therefore, the data needs to be standardized when building pipelines. 
-3. Missing values will be handled with pipelines. 
+Features in the dataset are processed before the modeling phase. My dataset has a majority of numerical features that have a lot of outliers. Firstly, I handle the outliers by capping them using the 97% value. This reduces the range of the numerical values facilitating better modeling. Secondly, some of the columns that are highly correlated are dopping to reduce the feature set to 23. This helps achieve managable run times. 
+
+I also combine the 'Industrial' and 'Commercial' classes in the target varible to form a new class named 'Non-Residential'. This reduces my problem to a binary classification problem. 
+
+![Target variable distribution]()
+
+## Modeling
+
+I have chosen a few classifers to solve this classification problem and compared their evaluation scores to find the best model for this problem. I use the GridSearchCV to perform cross-validation and hyperparameter tuning. The model parameters that optimize the precision macro score are chosen to be the best parameters for the classifier. The different classifiers explored are:
+
+1. **Logistic Regression**: I start with this model as this is the simplest classifier model for binary classification. I have built logistic regression models with and without using PCA as a pre-processing step. Contrary to my expectation, including PCA takes longer time to run. This makes sense as my data is large and performing a GridSearch on large dataset can be computationally expensive. 
+2. **Decision Tree**: The simplest model for classifiaction is the Decision tree. I again build decision trees with and without using PCA as a pre-processign step. 
+3. **Random Forest**: Random forests are more complex but can give better results as they average the scores for different decision trees. However, this can also be computationally expensive. 
+4. **Stochastic Gradient Descent Classifier**: As I notice longer runtimes for my dataset, I decide to include the SGDClassifier with loss as 'hinge'. This is more efficient than Support vector machine model for my dataset. 
+
+These models are evaluated based on the F1 score, precision, recall and roc auc scores. 
+
+## Results
+
+Based on my analysis, the Random forest model gives the best scores. However, this model takes nearly 10 minutes to run. The next best model is the Logistic regression model. Logistic regression model with and without PCA perform similarly. Therefore, I conclude that Logistic regression is a good enough model when working with limited computational capability. 
+
+![Results]()
+
+## Further Explorations
+
+The following are some things that can be done to improve model performance:
+
+1. More nuanced feature engineering to improve the features that are used for modeling. 
+2. Pre-processing using KMeans or other methods can be implemented. 
+3. Splitting the data into train, validation and test, followed by training and evaluating the models manually can be useful in reducing run times. GridSearch can be computationally expensive for large datasets and might not be an ideal way to go about hyper-parameter tuning.  
+4. More nuanced models such as SVM or Neural Networks can be used if the computational capacity exists to run them on large datasets.
+5. Ensemble models where different classifiers can work together to make predictions can be used to for better performance.
+
+
 
 
 

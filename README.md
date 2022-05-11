@@ -40,7 +40,7 @@ I have chosen a few classifers to solve this classification problem and compared
 3. **Random Forest**: Random forests are more complex but can give better results as they average the scores for different decision trees. However, this can also be computationally expensive. 
 4. **Stochastic Gradient Descent Classifier**: As I notice longer runtimes for my dataset, I decide to include the SGDClassifier with loss as 'hinge'. This is more efficient than Support vector machine model for my dataset. 
 
-These models are evaluated based on the F1 score, precision, recall and roc auc scores. The code for modeling can be found in the 'Chicago_Energy_Modeling.' 
+These models are evaluated based on the F1 score, precision, recall and roc auc scores. The code for modeling can be found in the 'Chicago_Energy_Modeling.ipynb' notebook. 
 
 ## Results
 

@@ -31,7 +31,7 @@ Features in the dataset are processed before the modeling phase. My dataset has 
 
 I also combine the 'Industrial' and 'Commercial' classes in the target varible to form a new class named 'Non-Residential'. This reduces my problem to a binary classification problem. 
 
-![Target variable distribution](https://github.com/Pam2020/DATA602-FinalProject-ChicagoEnergy/blob/main/Images/Results.PNG)
+![Target variable distribution](https://github.com/Pam2020/DATA602-FinalProject-ChicagoEnergy/blob/main/Images/TargetDistribution.PNG)
 
 ## Modeling
 
@@ -48,7 +48,7 @@ These models are evaluated based on the F1 score, precision, recall and roc auc 
 
 Based on my analysis, the Random forest model gives the best scores. However, this model takes nearly 10 minutes to run. The next best model is the Logistic regression model. Logistic regression model with and without PCA perform similarly. Therefore, I conclude that Logistic regression is a good enough model when working with limited computational capability. 
 
-![Results]()
+![Results](https://github.com/Pam2020/DATA602-FinalProject-ChicagoEnergy/blob/main/Images/Results.PNG)
 
 ## Further Explorations
 
